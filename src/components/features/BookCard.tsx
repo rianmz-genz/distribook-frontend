@@ -38,10 +38,10 @@ const BookCard: React.FC<BookCardProps> = ({
       hoverable 
       padding="none" 
       onClick={handleClick}
-      className="overflow-hidden group"
+      className="overflow-hidden group flex flex-col h-full"
     >
       {/* Book Cover */}
-      <div className="relative aspect-[3/4] bg-gray-100 dark:bg-gray-700 overflow-hidden">
+      <div className="relative aspect-[3/4] bg-gray-100 dark:bg-gray-700 overflow-hidden shrink-0">
         {book.cover_image ? (
           <img
             src={book.cover_image}
@@ -53,8 +53,8 @@ const BookCard: React.FC<BookCardProps> = ({
             }}
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-4xl text-gray-400">📚</span>
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900/30 dark:to-purple-800/30">
+            <span className="text-4xl">📚</span>
           </div>
         )}
         
@@ -66,33 +66,35 @@ const BookCard: React.FC<BookCardProps> = ({
             : 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-400'
           }
         `}>
-          {isAvailable ? `${book.available_stock} tersedia` : 'Tidak tersedia'}
+          {isAvailable ? `${book.available_stock} tersedia` : 'Habis'}
         </div>
       </div>
 
       {/* Book Info */}
-      <div className="p-4">
-        <h3 className="font-semibold text-gray-900 dark:text-white line-clamp-2 mb-1">
+      <div className="p-3 flex flex-col flex-1">
+        <h3 className="font-semibold text-sm text-gray-900 dark:text-white line-clamp-2 mb-1 leading-tight">
           {book.title}
         </h3>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+        <p className="text-xs text-gray-500 dark:text-gray-400 mb-1 truncate">
           {book.author}
         </p>
-        <div className="flex items-center justify-between text-xs text-gray-400 dark:text-gray-500 mb-3">
-          <span>{book.publisher}</span>
-          <span>{book.year_published}</span>
+        <div className="flex items-center justify-between text-xs text-gray-400 dark:text-gray-500 mb-2">
+          <span className="truncate max-w-[60%]">{book.publisher}</span>
+          <span className="shrink-0">{book.year_published}</span>
         </div>
 
         {showBorrowButton && (
-          <Button
-            variant={isAvailable ? 'secondary' : 'ghost'}
-            size="sm"
-            fullWidth
-            disabled={!isAvailable}
-            onClick={handleBorrow}
-          >
-            {isAvailable ? 'Pinjam' : 'Tidak Tersedia'}
-          </Button>
+          <div className="mt-auto">
+            <Button
+              variant={isAvailable ? 'secondary' : 'ghost'}
+              size="sm"
+              fullWidth
+              disabled={!isAvailable}
+              onClick={handleBorrow}
+            >
+              {isAvailable ? 'Pinjam' : 'Tidak Tersedia'}
+            </Button>
+          </div>
         )}
       </div>
     </Card>

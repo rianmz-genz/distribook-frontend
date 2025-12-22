@@ -114,8 +114,8 @@
   outline-offset: 2px;
 }
 
-/* Smooth transitions for theme changes */
-* {
+/* Smooth transitions for theme changes - applied to specific elements only */
+.theme-transition {
   transition-property: background-color, border-color;
   transition-duration: 150ms;
   transition-timing-function: ease-in-out;

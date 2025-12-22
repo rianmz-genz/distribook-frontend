@@ -91,17 +91,17 @@ const HomePage: React.FC = () => {
       </Card>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {stats.map((stat, index) => (
-          <Card key={index} className="flex items-center gap-4">
-            <div className={`p-3 rounded-xl ${stat.color}`}>
+          <Card key={index} className="flex items-center gap-4 min-h-[88px]">
+            <div className={`p-3 rounded-xl shrink-0 ${stat.color}`}>
               {stat.icon}
             </div>
-            <div>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white">
+            <div className="min-w-0">
+              <p className="text-2xl font-bold text-gray-900 dark:text-white truncate">
                 {stat.value}
               </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-gray-500 dark:text-gray-400 truncate">
                 {stat.label}
               </p>
             </div>

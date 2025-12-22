@@ -64,7 +64,7 @@ const Sidebar: React.FC = () => {
           bg-white dark:bg-gray-800 
           border-r border-gray-200 dark:border-gray-700
           transform transition-transform duration-300 ease-in-out
-          lg:translate-x-0 lg:static lg:z-0
+          lg:translate-x-0
           ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         `}
       >
