@@ -1,0 +1,9 @@
+# Distribook Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://distribook.vastro.id/sitemap.xml
+
+# Disallow API endpoints
+Disallow: /api/

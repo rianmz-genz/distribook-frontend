@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Dark mode configuration - use class strategy */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Custom animations */
 @keyframes fade-in {
   from {

@@ -2,16 +2,78 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Distribook - Aplikasi Perpustakaan Digital" />
-    <meta name="theme-color" content="#9333ea" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Distribook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Distribook - Aplikasi Perpustakaan Digital</title>
+    <meta name="title" content="Distribook - Aplikasi Perpustakaan Digital" />
+    <meta name="description" content="Distribook adalah aplikasi perpustakaan digital modern untuk memudahkan peminjaman buku, absensi, dan manajemen perpustakaan sekolah." />
+    <meta name="keywords" content="perpustakaan, digital, buku, peminjaman, sekolah, library, distribook, e-library" />
+    <meta name="author" content="Distribook Team" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Indonesian" />
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Theme & Colors -->
+    <meta name="theme-color" content="#9333ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)" />
+    <meta name="msapplication-TileColor" content="#9333ea" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://distribook.vastro.id/" />
+    <meta property="og:title" content="Distribook - Aplikasi Perpustakaan Digital" />
+    <meta property="og:description" content="Distribook adalah aplikasi perpustakaan digital modern untuk memudahkan peminjaman buku, absensi, dan manajemen perpustakaan sekolah." />
+    <meta property="og:image" content="https://distribook.vastro.id/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Distribook" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://distribook.vastro.id/" />
+    <meta name="twitter:title" content="Distribook - Aplikasi Perpustakaan Digital" />
+    <meta name="twitter:description" content="Distribook adalah aplikasi perpustakaan digital modern untuk memudahkan peminjaman buku, absensi, dan manajemen perpustakaan sekolah." />
+    <meta name="twitter:image" content="https://distribook.vastro.id/og-image.png" />
+    
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Distribook" />
+    
+    <!-- Android Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Distribook" />
+    
+    <!-- Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://distribook.vastro.id" />
+    <link rel="dns-prefetch" href="https://distribook.vastro.id" />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+        <h1>JavaScript Diperlukan</h1>
+        <p>Distribook memerlukan JavaScript untuk berjalan. Silakan aktifkan JavaScript di browser Anda.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
