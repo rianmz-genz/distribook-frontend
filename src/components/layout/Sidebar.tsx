@@ -5,9 +5,7 @@ import {
   ClipboardList, 
   Settings, 
   X,
-  Home,
-  Bell,
-  Clock
+  Home
 } from 'lucide-react';
 import { useAppDispatch, useAppSelector } from '@/store';
 import { selectSidebarOpen, setSidebarOpen } from '@/store/uiSlice';
@@ -25,8 +23,6 @@ const navItems: NavItem[] = [
   { path: '/home', label: 'Beranda', icon: <Home className="w-5 h-5" /> },
   { path: '/books', label: 'Buku', icon: <BookOpen className="w-5 h-5" /> },
   { path: '/loans', label: 'Peminjaman', icon: <ClipboardList className="w-5 h-5" /> },
-  { path: '/attendance', label: 'Absensi', icon: <Clock className="w-5 h-5" /> },
-  { path: '/announcements', label: 'Pengumuman', icon: <Bell className="w-5 h-5" /> },
   { path: '/settings', label: 'Pengaturan', icon: <Settings className="w-5 h-5" /> },
 ];
 

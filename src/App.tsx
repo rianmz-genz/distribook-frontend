@@ -10,8 +10,6 @@ import {
   BooksPage,
   BookDetailPage,
   LoansPage,
-  AttendancePage,
-  AnnouncementsPage,
   SettingsPage,
 } from '@/pages';
 import { ToastContainer } from '@/components/common';
@@ -50,8 +48,6 @@ const App: React.FC = () => {
               <Route path="/books" element={<BooksPage />} />
               <Route path="/books/:id" element={<BookDetailPage />} />
               <Route path="/loans" element={<LoansPage />} />
-              <Route path="/attendance" element={<AttendancePage />} />
-              <Route path="/announcements" element={<AnnouncementsPage />} />
               <Route path="/settings" element={<SettingsPage />} />
             </Route>
 
